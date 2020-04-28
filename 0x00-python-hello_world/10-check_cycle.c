@@ -6,8 +6,8 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *turtle = list;
-	listint_t *hare = list;
+	listint_t *turtle = list->next;
+	listint_t *hare = list->next;
 
 	if (!list || !list->next)
 		return (0);
