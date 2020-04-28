@@ -6,17 +6,17 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *turtle = list->next;
-	listint_t *hare = list->next;
+	listint_t *turtle = list;
+	listint_t *hare = list;
 
 	if (!list || !list->next)
 		return (0);
-	hare = list->next;
+	turtle = turtle->next; hare = hare->next->next;
 	while (turtle && hare)
 	{
 		if (turtle == hare)
 			return (1);
-		turtle = turtle->next; hare = hare->next; hare = hare->next;
+		turtle = turtle->next; hare = hare->next->next;
 	}
 	return (0);
 }
