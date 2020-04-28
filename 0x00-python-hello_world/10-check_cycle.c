@@ -11,7 +11,7 @@ int check_cycle(listint_t *list)
 
 	if (!list || !list->next)
 		return (0);
-	hare = hare->next;
+	turtle = turtle->next; hare = turtle->next;
 	while (turtle && hare)
 	{
 		if (turtle == hare)
