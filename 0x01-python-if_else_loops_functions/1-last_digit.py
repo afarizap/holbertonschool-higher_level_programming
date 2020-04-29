@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 numberabs = abs(number)
-    lastdigit = numberabs % 10
+lastdigit = numberabs % 10
 if number < 0:
     lastdigit = lastdigit * -1
 print("Last digit of {} is {} and is ".format(number, lastdigit), end="")
