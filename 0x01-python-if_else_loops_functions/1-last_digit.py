@@ -2,9 +2,9 @@
 import random
 number = random.randint(-10000, 10000)
 numberabs = abs(number)
-if numberabs < 10:
-    lastdigit = numberabs
-else:
+#if numberabs < 10:
+ #   lastdigit = numberabs
+#else:
     lastdigit = numberabs % 10
 if number < 0:
     lastdigit = lastdigit * -1
