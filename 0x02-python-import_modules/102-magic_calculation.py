@@ -7,7 +7,8 @@ def magic_calculation(a, b):
             c = add(c, i)
         return c
 
-    sub(a, b)
+    return sub(a, b)
+
 if __name__ == '__main__':
     import dis
     dis.dis(magic_calculation)
