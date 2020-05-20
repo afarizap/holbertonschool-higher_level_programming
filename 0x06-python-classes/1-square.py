@@ -3,6 +3,6 @@
 
 
 class Square:
-     """ size as private class atribute/method, initialized and defined"""
-     def __init__(self, size):
-          self.__size = size
+    """ size as private class method, initialized and defined"""
+    def __init__(self, size):
+        self.__size = size
