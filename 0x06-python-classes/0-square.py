@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""first class"""
+"""Square Class"""
 class Square:
     """ this does nothing"""
     pass
