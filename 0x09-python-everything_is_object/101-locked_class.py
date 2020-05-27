@@ -4,7 +4,4 @@
 
 class LockedClass:
     """ this has no atributes """
-    __slots__ = ['first_name']
-
-    def __init__(self, fn):
-        self.first_name = fn
+    __slots__ = 'first_name'
