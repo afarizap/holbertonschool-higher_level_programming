@@ -5,4 +5,3 @@
 class BaseGeometry:
     """ Base Geometry Class """
     pass
-chmod 755 
