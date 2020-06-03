@@ -4,5 +4,5 @@
 
 class BaseGeometry:
     """ Base Geometry Class """
-    pass
-chmod 755 
+    def area(self):
+        raise Exception("area() is not implemented Exception")
