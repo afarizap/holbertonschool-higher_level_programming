@@ -12,8 +12,9 @@ class Base:
         if id is not None:
             self.id = None
         else:
-            Base.__nb_objects +=1
+            Base.__nb_objects += 1
             self.id = self.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries):
         if list_dictionaries is None or len(list_dictionaries) is 0:
@@ -37,3 +38,15 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(1, 1, 1, 1, 1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        with open(cls.__name__ + ".json", "r", "utf-8") as f:
+            data = f.read
+            data2 = cls.from_json_string(data)
