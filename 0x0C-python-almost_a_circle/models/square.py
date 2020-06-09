@@ -9,9 +9,11 @@ class Square(Rectangle):
     """ And now the square """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """ imported attributes from Base """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ string format of attributes in Square """
         return "[Square] ({}) {}/{} - {}".format(self.id,
                                                  self.x,
                                                  self.y,
@@ -19,14 +21,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ getter """
         return self.width or self.height
 
     @size.setter
     def size(self, size):
+        """ Setter """
         self.width = size
         self.height = size
 
     def update(self, *args, **kwargs):
+        """ update square attributes """
         n = len(args)
 
         if 0 in range(n):
@@ -45,10 +50,9 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """ store sttributes in dictionary """
         dictionary = {'id': self.id,
                       'size': self.size,
                       'x': self.x,
                       'y': self.y}
-
         return dictionary
-
