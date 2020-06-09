@@ -10,7 +10,7 @@ class Base:
     def __init__(self, id=None):
         """ class constructor """
         if id is not None:
-            self.id = None
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
@@ -45,8 +45,8 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    @classmethod
-    def load_from_file(cls):
-        with open(cls.__name__ + ".json", "r", "utf-8") as f:
-            data = f.read
-            data2 = cls.from_json_string(data)
+    # @classmethod
+    # def load_from_file(cls):
+    #     with open(cls.__name__ + ".json", "r", "utf-8") as f:
+    #         data = f.read
+    #         data2 = cls.from_json_string(data)
