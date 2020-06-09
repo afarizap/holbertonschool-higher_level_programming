@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ setter constructor and getter """
+    """ Rectangle from Base """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ constructor call id from superclass assign args to att """
@@ -16,10 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ Getter """
         return self.__width
 
     @width.setter
     def width(self, width):
+        """ Setter """
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -28,10 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ Getter """
         return self.__height
 
     @height.setter
     def height(self, height):
+        """ Setter """
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
@@ -40,10 +44,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ Getter """
         return self.__x
 
     @x.setter
     def x(self, x):
+        """ Setter """
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -52,10 +58,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ Getter """
         return self.__y
 
     @y.setter
     def y(self, y):
+        """ Setter """
         if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -63,9 +71,11 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """ Return: area of rectangle """
         return self.__width * self.__height
 
     def display(self):
+        """ print Rectangle with # """
         [print() for i in range(self.__y)]
         for j in range(self.__height):
             [print(" ", end="") for i in range(self.__x)]
@@ -73,11 +83,13 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """ String format of Rectangle attributes """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                        self.__y, self.__width,
                                                        self.__height)
 
     def update(self, *args, **kwargs):
+        """ Update Rectangle attributes """
         n = len(args)
         if 0 in range(n):
             self.id = args[0]
@@ -93,6 +105,7 @@ class Rectangle(Base):
             setattr(self, key, value)
 
     def to_dictionary(self):
+        """ Returns a dictionary with Rectangle attributes """
         dictionary = {'id': self.id,
                       'width': self.width,
                       'height': self.height,
