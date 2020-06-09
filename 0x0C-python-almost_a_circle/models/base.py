@@ -17,12 +17,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ translate a dictionary to json string (dumps) """
         if list_dictionaries is None or len(list_dictionaries) is 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ write json string in a file .json """
         jlist = []
         if len(list_objs) is 0:
             pass
@@ -34,6 +36,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ return json string LISTED """
         if json_string is None or len(json_string) is 0:
             return []
         else:
@@ -41,6 +44,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ create a base instance """
         dummy = cls(1, 1, 1, 1, 1)
         dummy.update(**dictionary)
         return dummy
