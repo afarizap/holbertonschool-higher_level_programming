@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ manage id attribute, to avoid duplicating the same code """
 import json
+import os
 
 
 class Base:
@@ -25,8 +26,9 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ write json string in a file .json """
+
         jlist = []
-        if len(list_objs) is 0:
+        if len(list_objs) is 0 and list_objs is None:
             pass
         else:
             for obj in list_objs:
@@ -49,8 +51,9 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    # @classmethod
-    # def load_from_file(cls):
-    #     with open(cls.__name__ + ".json", "r", "utf-8") as f:
-    #         data = f.read
-    #         data2 = cls.from_json_string(data)
+    @classmethod
+    def load_from_file(cls):
+        with open(cls.__name__ + ".json", "r", "utf-8") as f:
+            if 
+            data = f.read
+            data2 = cls.from_json_string(data)
