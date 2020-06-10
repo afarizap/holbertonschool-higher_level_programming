@@ -54,6 +54,5 @@ class Base:
     @classmethod
     def load_from_file(cls):
         with open(cls.__name__ + ".json", "r", "utf-8") as f:
-            if 
             data = f.read
             data2 = cls.from_json_string(data)
