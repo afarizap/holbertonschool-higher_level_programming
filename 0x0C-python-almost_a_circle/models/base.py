@@ -28,7 +28,7 @@ class Base:
         """ write json string in a file .json """
 
         jlist = []
-        if len(list_objs) is 0 and list_objs is None:
+        if list_objs is None:
             pass
         else:
             for obj in list_objs:
