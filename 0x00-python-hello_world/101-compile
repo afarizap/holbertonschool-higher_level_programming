@@ -1,2 +1,2 @@
 #!/bin/bash
-python -m compileall $PYFILE -f
+python -m compileall $PYFILE -b
