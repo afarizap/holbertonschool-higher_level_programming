@@ -12,7 +12,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *new = *head, *h = *head;
-	int array[100], len = 0;
+	int array[200], len = 0;
 
 	while (new != NULL)
 		array[len] = new->n, new = new->next, len++;
