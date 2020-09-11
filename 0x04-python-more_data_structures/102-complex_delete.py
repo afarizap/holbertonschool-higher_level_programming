@@ -1,7 +1,6 @@
 #!/bin/bash/python3
 def complex_delete(a_dictionary, value):
-    new = a_dictionary
-    for keys, values in list(new.items()):
+    for keys, values in list(a_dictionary.items()):
         if values == value:
-            new.pop(keys)
-    return new
+            a_dictionary.pop(keys)
+    return a_dictionary
