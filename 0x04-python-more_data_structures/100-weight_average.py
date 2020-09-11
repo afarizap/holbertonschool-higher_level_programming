@@ -2,6 +2,8 @@
 def weight_average(my_list=[]):
     sum2 = 0
     quot = 0
+    if not list:
+        return 0
     for i in my_list:
         mul1 = 1
         quot += i[1]
