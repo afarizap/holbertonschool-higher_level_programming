@@ -77,3 +77,11 @@ Now use it:
     >>> add_integer(
     Traceback (most recent call last):
     SyntaxError: unexpected EOF while parsing
+
+    >>> add_integer(float('NaN'), float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(float('inf'), -float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
