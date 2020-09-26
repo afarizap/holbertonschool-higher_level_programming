@@ -3,6 +3,7 @@
 prints a square with the character #
 """
 
+
 def print_square(size):
     """ prints a square with the character # """
     character = "#"
