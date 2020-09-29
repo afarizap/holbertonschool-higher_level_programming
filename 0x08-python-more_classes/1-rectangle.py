@@ -11,10 +11,10 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    @property
     def width(self):
         return self.__width
 
+    @wraps.width
     def width(self, width):
         if type(width) is not int:
             raise TypeError("width must be an integer")
@@ -22,10 +22,10 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = width
 
-    @property
     def height(self):
         return self.__height
 
+    @wraps.width
     def height(self, height):
         if type(height) is not int:
             raise TypeError("height must be an integer")
