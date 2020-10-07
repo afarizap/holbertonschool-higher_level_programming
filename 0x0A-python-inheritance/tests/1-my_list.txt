@@ -1,0 +1,25 @@
+# The 1-my_list module
+=============================
+
+
+Using MyList
+--------------------
+
+First import MyList function from 1-my_list module
+
+    >>> MyList = __import__("1-my_list").MyList
+
+Now use it:
+
+    >>> matrix = [1, 2, 3]
+
+    >>> MyList()
+    []
+
+    >>> MyList(matrix.append(-1))
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not iterable
+
+    >>> my_list = MyList()
+
+    >>> print(my_list.append(-1))
