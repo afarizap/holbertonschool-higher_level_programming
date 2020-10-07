@@ -5,22 +5,18 @@
 class BaseGeometry:
     """ Base Geometry Class """
     def area(self):
-        """ exception """
-        raise Exception("area() is not implemented Exception")
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ validate if value is an in """
         if type(value) is not int:
-            raise TypeError ("<name> must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError ("<name> must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
+
 
 class Rectangle(BaseGeometry):
     """ Rectangle Class """
-
-
     def __init__(self, width, height):
-        """ validate and private values """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
@@ -32,24 +28,32 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """ print legible rectangle fields """
-        a = "[Rectangle] {}/{}".format(self.__width, self.__height)
-        return a
+        m = "[{}] {}/{}".format(__class__.__name__,
+                                self.__width, self.__height)
+        return m
+
 
 class Square(Rectangle):
     """ Square Class """
-
-
     def __init__(self, size):
         """ instatation size """
+        Rectangle.__init__(self, size, size)
         self.integer_validator("size", size)
         self.__size = size
-        super.__init(size, size)
+        self.__width = size
+        self.__height = size
 
-    def area(self, size):
+    def area(self):
         """ area method """
-        return self.area
+        return super().area()
 
     def __str__(self):
-        """ this prints """
-        b = "[Square] {}/{}".format(self.__size, self.__size)
-        return b
+        """ print legible rectangle fields """
+        m = "[{}] {}/{}".format(__class__.__name__,
+                                self.__width, self.__height)
+        return m
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testfile("./tests/7-base_geometry.txt")
