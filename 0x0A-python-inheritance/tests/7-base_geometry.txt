@@ -1,0 +1,15 @@
+# The 7-base_geometry module
+=============================
+
+
+Using BaseGeometry
+--------------------
+
+First import BaseGeometry function from 7-base_geometry module
+
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Now use it:
+
+    >>> BaseGeometry() # doctest: +ELLIPSIS
+    <7-base_geometry.BaseGeometry object at 0x...>
