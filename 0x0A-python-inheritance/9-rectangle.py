@@ -28,7 +28,9 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """ print legible rectangle fields """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        m = "[{}] {}/{}".format(self.__class__.__name__,
+                                self.__width, self.__height)
+        return m
 
 if __name__ == "__main__":
     import doctest
