@@ -5,4 +5,6 @@ directly or indirectly from the specified class """
 
 def inherits_from(obj, a_class):
     """ return true or false """
-    return issubclass(obj, a_class)
+    if type(obj) is a_class:
+        return False
+    return issubclass(obj.__class__, a_class)
