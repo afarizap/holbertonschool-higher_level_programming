@@ -16,7 +16,7 @@ class Student:
         new = self.__dict__.copy()
         if attrs and isinstance(attrs, list):
             for i in self.__dict__.keys():
-                if i in attrs:
+                if i in attrs and type(i) is str:
                     continue
                 else:
                     new.pop(i)
