@@ -21,7 +21,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def list_of_one_element(self):
         """ check if the function recives a list with 1 element """
-        self.assertEqual(max_integer(5), 5)
+        lista = [5]
+        self.assertEqual(max_integer(lista), 5)
     
 
 if __name__ == "__main__":
