@@ -16,8 +16,13 @@ class TestMaxInteger(unittest.TestCase):
         self.assertIs(type(max_integer([1])), int)
 
     def max_at_the_end(self):
-        """ test if there is a max in the end of the list"""
+        """ test if there is a max in the end of the list """
         pass
+
+    def list_of_one_element(self):
+        """ check if the function recives a list with 1 element """
+        self.assertEqual(max_integer([5]), 5)
+    
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
