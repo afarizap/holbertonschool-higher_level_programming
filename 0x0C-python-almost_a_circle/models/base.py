@@ -26,7 +26,6 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ write json string in a file .json """
-
         jlist = []
         if list_objs is None:
             pass

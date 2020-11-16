@@ -23,3 +23,4 @@ Now use it:
     >>> my_list = MyList()
 
     >>> print(my_list.append(-1))
+    None
