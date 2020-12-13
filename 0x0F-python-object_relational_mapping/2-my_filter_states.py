@@ -14,7 +14,8 @@ if __name__ == "__main__":
     dbc = MySQLdb.connect(user=usr, passwd=pss, db=dbn)
 
     cursor = dbc.cursor()
-    cursor.execute("SELECT * FROM states WHERE name={!a}".format(stn))
+    if stn:
+        cursor.execute("SELECT * FROM states WHERE name={!r}".format(stn))
 
     r = cursor.fetchall()
 
