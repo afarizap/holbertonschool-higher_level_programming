@@ -14,10 +14,9 @@ if __name__ == "__main__":
     dbc = MySQLdb.connect(user=usr, passwd=pss, db=dbn)
 
     cursor = dbc.cursor()
-    cursor.execute("SELECT * FROM states")
+    cursor.execute("SELECT * FROM states WHERE name='{}'".format(stn))
 
     r = cursor.fetchall()
 
     for i in r:
-        if i[1] == stn:
-            print(i)
+        print(i)
