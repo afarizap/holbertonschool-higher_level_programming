@@ -22,3 +22,5 @@ if __name__ == "__main__":
 
     for i in r:
         print(i)
+    cursor.close()
+    dbn.close()
