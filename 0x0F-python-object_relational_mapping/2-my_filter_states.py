@@ -14,12 +14,9 @@ if __name__ == "__main__":
     dbc = MySQLdb.connect(user=usr, passwd=pss, db=dbn)
 
     cursor = dbc.cursor()
-    cursor.execute("SELECT * FROM states WHERE name={!r}".format(stn))
+    cursor.execute("SELECT * FROM states WHERE name={!r} ORDER BY states.id".format(stn))
 
     r = cursor.fetchall()
 
     for i in r:
         print(i)
-
-    cursor.close()
-    dbc.close()
