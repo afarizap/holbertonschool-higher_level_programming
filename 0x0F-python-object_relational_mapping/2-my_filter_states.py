@@ -4,6 +4,7 @@
 import sys
 import MySQLdb
 
+
 if __name__ == "__main__":
     usr = sys.argv[1]
     pss = sys.argv[2]
