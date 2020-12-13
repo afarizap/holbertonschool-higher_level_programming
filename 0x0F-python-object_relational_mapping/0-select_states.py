@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" lists all states from the database hbtn_0e_0_usa """
-    """ importa solo cuando se llama el main los argumentos y el modulo MySQL"""
-    import sys
-    import MySQLdb
+""" lists all states from the database hbtn_0e_0_usa,
+importa solo cuando se llama el main los argumentos y el modulo MySQL"""
+import sys
+import MySQLdb
 
 
 if __name__ == "__main__":
