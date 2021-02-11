@@ -7,9 +7,9 @@ request(process.argv[2], (err, response, body) => {
   for (const task of JSON.parse(body)) {
     if (task.completed) {
       if (users[task.userId]) {
-      users[task.userId]++;
+        users[task.userId]++;
       } else {
-      users[task.userId] = 1;
+        users[task.userId] = 1;
       }
     }
   }
