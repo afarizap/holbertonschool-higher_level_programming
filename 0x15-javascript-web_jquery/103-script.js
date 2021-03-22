@@ -6,7 +6,7 @@ function Holis () {
 $('INPUT#btn_translate').click(Holis);
 $('INPUT#language_code').keypress(function (event) {
   var keycode = (event.keyCode ? event.keyCode : event.which);
-  if(keycode === 13){
-        Holis;  
+  if(keycode == '13'){
+        Holis();  
     }
-}); 
+});  
